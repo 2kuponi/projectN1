@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(wallpapertip_colourful-wallpaper_1056898.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #00ffbf;
+    /* animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: linear; */
+    position: relative;
+
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    color: #55375a;
+    font-size: 16px;
+    font-family: cursive;
+}
+
+li:not(:last-child) {
+    margin-right: 60px;
+}
+
+.nav-label {
+    position: absolute;
+    right: 20px;
+    transform: translateY(-50%);
+    top: 50%;
+    user-select: none;
+    /* არ ინიშნება */
+    cursor: pointer;
+}
+
+#nav {
+    display: none;
+}
+
+/* .navbar {
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    background: red;
+    top: 0;
+    left: 0;
+} */
+
+.slider {
+    width: 100%;
+    height: 420px;
+}
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider-button {
+    position: absolute;
+    background: white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    padding: 30px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    animation-name: zoomin;
+    animation-duration: 2s;
+    transition: 0.4s ease-in-out;
+}
+
+.slider-button:hover {
+    color: #fff;
+    background: rgb(236, 9, 9,1.6);
+    transition: 0.4s ease-in-out;
+}
+
+
+@keyframes zoomin {
+    0%{
+        top: 56%;
+        opacity: 0;
+    }
+
+    100% {
+        /* transform: translate(50%,50%); */
+        opacity: 1;
+        top: 40%;
+    }
+}
+
+
+/* Content Add (18/10/2021 1:39) */
+
+.gendersec-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 2em auto;
+}
+
+.gendersec-card {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.gendersec-img {
+    width: 310px;
+    height: 350px;
+    background: url(wallpapertip_colourful-wallpaper_1056898.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    margin-left: 40px;
+    opacity: 0.7;
+    transition: 0.4s ease-in-out;
+}
+
+.gendersec-img:hover {
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.freespace {
+    height: 270px;
+}
+
+.gendersec-img-content {
+    height: 80px;
+    background: rgb(73, 143, 143,0.5);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
+    opacity: 1;
+}
+
+/* შეცვალეთ opacity 1-დან 0-ში ,რომ function showgic&hidegic შედეგი იხილოთ */
+
+.gendersec-img-content a {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    text-decoration: none;
+    padding: 15px 19px;
+    color: black;
+    background: #fff;
+    border-radius: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    border: transparent;
+    transition: 0.4s ease-in-out;
+    font-size: 15px;
+    opacity: 1;
+    /* opacity: 0; */
+}
+
+.gendersec-img-content a:hover {
+    color: #fff;
+    background: rgb(236, 9, 9,0.8);
+    transition: 0.4s ease-in-out;
+} 

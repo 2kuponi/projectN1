@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <ul>
+            <li><a href="#"></a>Men</li>
+            <li><a href="#"></a>Women</li>
+            <li><a href="#"></a>Kids</li>
+        </ul>
+
+
+        <!-- <label class="nav-label" for="nav">navigation</label>
+        <input type="checkbox" id="nav" name="nav" > -->
+        
+    </header>
+
+    <div class="slider">
+        <img src="wallpapertip_colourful-wallpaper_1056898.jpg" alt="" class="slider-image">
+        <button class="slider-button">Shop with us</button>
+    </div>
+
+    <!-- GENDERSEC SECTION -->
+
+    <section id="gendersec">
+        <div class="gendersec-content">
+
+            <div class="gendersec-card" >
+                <div class="gendersec-img" onmouseover="showgic(1)" onmouseleave="hidegic(1)">
+                    <div class="freespace">
+                        <!-- free space for any content -->
+                    </div>
+                  <div class="gendersec-img-content g1">
+                    <a href="#" class="gica">Men shop</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="gendersec-card">
+                <div class="gendersec-img" onmouseover="showgic(2)" onmouseleave="hidegic(2)">
+                    <div class="freespace">
+                        <!-- free space for any content -->
+                    </div>
+                  <div class="gendersec-img-content g2">
+                    <a href="#" class="gica">Women shop</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="gendersec-card">
+                <div class="gendersec-img" onmouseover="showgic(3)" onmouseleave="hidegic(3)">
+                    <div class="freespace">
+                        <!-- free space for any content -->
+                    </div>
+                  <div class="gendersec-img-content g3">
+                    <a href="#" class="gica">Kid shop</a>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- რატო არ მუშაობს ეს კოდი მაინტერესებს (შედეგის სანახავად opacity class="gendersec-img-content"-ს დაუნიშეთ) -->
+
+    <script type="text/javascript">
+        function showgic(parhams) {
+            document.getElementsByClassName('g1'+params)[0].style.opacity=1;
+            document.getElementsByClassName('g2'+params)[0].style.opacity=1;
+            document.getElementsByClassName('g3'+params)[0].style.opacity=1;
+        }
+        function hidegic(params) {
+            document.getElementsByClassName('g1'+params)[0].style.opacity=0;
+            document.getElementsByClassName('g2'+params)[0].style.opacity=0;
+            document.getElementsByClassName('g3'+params)[0].style.opacity=0;
+        }
+    </script>
+
+</body>
+</html>
