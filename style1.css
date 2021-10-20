@@ -10,31 +10,134 @@ body {
     background-position: center;
     background-size: cover;
 }
+
 header {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #00ffbf;
-    /* animation-name: fadeIn;
-    animation-duration: 2s;
-    animation-timing-function: linear; */
-    position: relative;
+    background-color: rgb(73, 143, 143,0.5);
 
 }
 
+.header-con {
+    height: 10vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+}
+
+.logocon
+.search
+ {
+    flex: 1;
+}
+
+
+/* SEARCH */
+
+header .search {
+    justify-content: flex-end;
+}
+
+
+header .search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+header .search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+}
+
+header .search input::placeholder {
+    color: #fff;
+}
+
+header .search .fa-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+
+/* SEARCH END  */
+
+
+
+.header-nav {
+    flex: 3;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.header-nav {
+    display: flex;
+}
+
+
+
+.header-items {
+    font-size: 22px;
+    position: relative;
+}
+
+.header-item:hover {
+    cursor: pointer;
+}
+
+.header-item-1:hover ~ .header-item-1-dropdown,
+.header-item-2:hover ~ .header-item-2-dropdown,
+.header-item-3:hover ~ .header-item-3-dropdown {
+    display: block;
+    cursor: pointer;
+}
+
+.header-item-2-dropdown,
+.header-item-3-dropdown,
+.header-item-1-dropdown {
+    display: none;
+    position: absolute;
+    left: -70%;
+    top: -50%;
+    width: 100px;
+    /* height: 200px; */
+    background: #fff;
+    z-index: 1;
+    transform: translateY(30%);
+    animation: zoomIn .4s linear;
+}
+
+
 ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 li {
-    display: inline;
-    color: #55375a;
-    font-size: 16px;
-    font-family: cursive;
+    margin: 5px;
 }
 
-li:not(:last-child) {
-    margin-right: 60px;
+.logocon img {
+    width: 40%;
+    height: auto;
 }
 
 .nav-label {
@@ -51,14 +154,11 @@ li:not(:last-child) {
     display: none;
 }
 
-/* .navbar {
-    position: absolute;
-    width: 350px;
-    height: 100%;
-    background: red;
-    top: 0;
-    left: 0;
-} */
+
+
+
+
+/* SLIDER  */
 
 .slider {
     width: 100%;
@@ -72,7 +172,7 @@ li:not(:last-child) {
 .slider-button {
     position: absolute;
     background: white;
-    top: 40%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     border: none;
@@ -83,29 +183,37 @@ li:not(:last-child) {
     cursor: pointer;
     animation-name: zoomin;
     animation-duration: 2s;
-    transition: 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 10px 10px #423b33;
 }
 
-.slider-button:hover {
-    color: #fff;
-    background: rgb(236, 9, 9,1.6);
-    transition: 0.4s ease-in-out;
-}
 
 
 @keyframes zoomin {
     0%{
-        top: 56%;
+        top: 80%;
         opacity: 0;
     }
 
     100% {
         /* transform: translate(50%,50%); */
         opacity: 1;
-        top: 40%;
+        top: 60%;
     }
 }
 
+@keyframes zoomIn {
+    0%{
+        top: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        /* transform: translate(50%,50%); */
+        opacity: 1;
+        top: -50%;
+    }
+}
 
 /* Content Add (18/10/2021 1:39) */
 
@@ -128,7 +236,7 @@ li:not(:last-child) {
 .gendersec-img {
     width: 310px;
     height: 350px;
-    background: url(wallpapertip_colourful-wallpaper_1056898.jpg);
+    background: url(assets/wallpapertip_colourful-wallpaper_1056898.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -186,3 +294,54 @@ li:not(:last-child) {
     background: rgb(236, 9, 9,0.8);
     transition: 0.4s ease-in-out;
 } 
+
+.slider-button:active{
+    box-shadow: 0px 5px 10px #423b33;
+    transform: translate(-50%,-40%);
+}
+
+/* FOOOTER  */
+
+footer {
+    background: rgb(219, 209, 209,0.2);
+    color: #777777;
+    height: 15vh;
+    font-size: 18px;
+}
+.contact-info .fa{
+    color: #007bff;
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: 30px auto;
+
+}
+
+.contact-info .addresses {
+    display: flex;
+}
+
+.address1 {
+    margin-right: 30px;
+}
+
+.contact-info .addresses,
+.social {
+    flex: 1;
+}
+
+.contact-info .fauthor {
+    flex: 2;
+}
+
+.addresses,
+.fauthor,
+.social {
+    transform: translateY(150%);
+}
